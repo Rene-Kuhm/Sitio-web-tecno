@@ -963,19 +963,31 @@
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 Swal.fire({
+                    toast: true, // Hace que la alerta tenga forma de tira
+                    width: '400px', // Ajusta el ancho de la alerta
+                    position: 'top-end', // Posiciona la alerta en la esquina superior derecha
                     title: 'Enviado!',
                     text: 'Tu mensaje ha sido enviado con éxito!',
                     icon: 'success',
-                    timer: 3000 // La alerta desaparecerá después de 3 segundos
+                    timer: 3000, // La alerta desaparecerá después de 3 segundos
+                    showConfirmButton: false, // Oculta el botón de confirmación
+                    background: '#6d2f8a', // Cambia el color de fondo de la alerta
+                    color: '#fff', // Cambia el color del texto de la alerta
                 });
                 form.reset(); // Borra los campos del formulario
             }, function(error) {
                 console.log('FAILED...', error);
                 Swal.fire({
+                    toast: true, // Hace que la alerta tenga forma de tira
+                    width: '400px', // Ajusta el ancho de la alerta
+                    position: 'top-end', // Posiciona la alerta en la esquina superior derecha
                     title: 'Error!',
                     text: 'Falló el envío del mensaje: ' + error.text,
                     icon: 'error',
-                    timer: 3000 // La alerta desaparecerá después de 3 segundos
+                    timer: 3000, // La alerta desaparecerá después de 3 segundos
+                    showConfirmButton: false, // Oculta el botón de confirmación
+                    background: '#6d2f8a', // Cambia el color de fondo de la alerta
+                    color: '#fff', // Cambia el color del texto de la alerta
                 });
             });
     });
