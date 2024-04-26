@@ -422,7 +422,10 @@ nav li a.active,
 
     .container-nav {
         width: 100%;
-        justify-content: space-between;
+        justify-content: center;
+    }
+    .navbar-logo {
+        margin-right: 0px;
     }
 }
 
