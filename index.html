@@ -1122,7 +1122,11 @@
     
         // Agrega un evento de clic a cada enlace que llama a la función toggleNav
         for (var i = 0; i < navLinks.length; i++) {
-            navLinks[i].addEventListener('click', toggleNav);
+            navLinks[i].addEventListener('click', function(event) {
+                event.preventDefault();
+                toggleNav();
+                window.location.hash = this.hash;
+            });
         }
     </script>
 
