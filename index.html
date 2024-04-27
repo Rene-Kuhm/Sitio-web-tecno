@@ -1113,8 +1113,10 @@
         function toggleNav() {
             var nav = document.querySelector('.navbar-nav');
             var right = document.querySelector('.nav-right');
-            nav.style.display = 'none';
-            right.style.display = 'none';
+            setTimeout(function() {
+                nav.style.display = 'none';
+                right.style.display = 'none';
+            }, 100); // Agrega un retraso de 100 milisegundos
         }
     
         // Selecciona todos los enlaces en el menú de navegación
@@ -1122,11 +1124,7 @@
     
         // Agrega un evento de clic a cada enlace que llama a la función toggleNav
         for (var i = 0; i < navLinks.length; i++) {
-            navLinks[i].addEventListener('click', function(event) {
-                event.preventDefault();
-                toggleNav();
-                window.location.hash = this.hash;
-            });
+            navLinks[i].addEventListener('click', toggleNav);
         }
     </script>
 
