@@ -747,6 +747,10 @@ aside .pages {
     background-repeat: no-repeat;
     padding: 172px 0 279px 0;
 }
+.hero::before{
+    content: url("../Images/bg/hero.webp");
+    display: none;
+}
 
 .hero .container {
     position: relative;
