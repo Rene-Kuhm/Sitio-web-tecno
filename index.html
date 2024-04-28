@@ -870,54 +870,6 @@
             </div>
         </section>
         <!-- ====== End of 1.12. FAQ section ====== -->
-        <!-- ====== 1.13. Blogs section ====== -->
-        <!-- <section class="blog">
-            <div class="container">
-                <div class="flex blog-center" data-aos="fade-down">
-                    <div class="w-66">
-                        <div class="flex gap-1">
-                            <hr class="blog-hr1">
-                            <h5>BLOGS</h5>
-                        </div>
-                        <h2 class="mt-1">Latest Posts</h2>
-                        <p class="mt-1 mb-15">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has
-                            been the industry's standard dummy text ever.
-                        </p>
-                    </div>
-                    <div class="w-33 mt-1 flex flex-end">
-                        <a href="blog.html" class="btn_hover2">See all blogs</a>
-                    </div>
-                </div>
-                <div class="flex gap-2 mt-15 blog-cards">
-                    <div data-aos="fade-up" class="blog-card w-100">
-                        <img src="Images/home/blog1.png" class="card-img-top" alt="img">
-                        <div class="card-body">
-                            <h4>10 Must-Know Digital Marketing Trends In 2023
-                            </h4>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div data-aos="fade-down" class="blog-card w-100">
-                        <img src="Images/home/blog2.png" class="card-img-top" alt="img">
-                        <div class="card-body">
-                            <h4>The Importance Of Responsive Web Design For Your Business
-                            </h4>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" class="blog-card w-100">
-                        <img src="Images/home/blog3.png" class="card-img-top" alt="img">
-                        <div class="card-body">
-                            <h4>How To Create A Successful Social Media Strategy
-                            </h4>
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>-->
-        <!-- ====== End of 1.14. Blogs section ====== -->
         <!-- ====== 1.15. Footer section ====== -->
         <footer>
             <div class="container">
@@ -1021,14 +973,16 @@
 
 
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 150,
-            duration: 1250,
-            once: true,
-        });
-    </script>
+            <script type="module">
+                import AOS from 'https://cdn.skypack.dev/aos@3.0.0-beta.6/dist/aos.js';
+            
+                AOS.init({
+                    offset: 150,
+                    duration: 1250,
+                    once: true,
+                });
+            </script>
+            
 
     <!-- jquery js cdn -->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
