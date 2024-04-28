@@ -933,6 +933,7 @@ aside .pages {
 
 .logoipsum img {
     width: 120px;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -1972,79 +1973,6 @@ aside .pages {
 }
 
 /* ====== End of 1.12. FAQ section ====== */
-
-/* ====== 1.13. Blogs section ====== */
-
-.blog {
-    background: #150725;
-    padding: 120px 0;
-}
-
-.blog h5 {
-    color: #ffffff;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.blog h2 {
-    color: #ffffff;
-}
-
-.blog p {
-    color: #d3c9c1;
-    padding: 0 296px 0 0;
-}
-
-.blog .blog-hr1 {
-    opacity: 1.25;
-    height: 1px;
-    color: #b520a3;
-    width: 60px;
-    border: 1px solid;
-}
-
-.blog .btn_hover2 {
-    padding: 15px 30px;
-    border: 1.5px solid #ff8c4b;
-}
-
-.blog .row a {
-    border: 1.5px solid #ff8c4b;
-}
-
-.blog-card {
-    flex: 0 0 33.33%;
-    overflow: hidden;
-    padding-bottom: 20px;
-}
-
-.blog-card img {
-    width: 100%;
-    transition: all 0.4s ease;
-}
-
-.blog-card:hover img {
-    transform: scale(1.05);
-    opacity: .8;
-    transition: all 0.4s ease;
-}
-
-.blog-card h4 {
-    color: #d3c9c1;
-    margin: 18px 0;
-    padding: 0 30px 0 0;
-}
-
-.blog-card a {
-    padding: 0 0 11px 0 !important;
-    border-bottom: 2px solid #ff8c4b;
-    letter-spacing: 2px;
-    background: linear-gradient(66.75deg, #f54a48 0.87%, #fa982f 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* ====== End of 1.13. Blogs section ====== */
 
 /* ====== 1.14. Footer section ====== */
 
