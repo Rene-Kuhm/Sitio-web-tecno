@@ -985,6 +985,14 @@
 
 
 
+    <script type="module">
+        import AOS from 'https://cdn.skypack.dev/aos@3.0.0-beta.6/dist/aos.js';
+        AOS.init({
+            offset: 150,
+            duration: 1250,
+            once: true,
+        });
+    </script>
     <script type="module" src="https://cdn.skypack.dev/aos@3.0.0-beta.6/dist/aos.js" integrity="sha384-..."
         crossorigin="anonymous"></script>
 
@@ -1001,11 +1009,11 @@
         // Luego, puedes llamar a esta función cuando sea necesario cargar el script
         // Por ejemplo, podrías hacerlo en respuesta a un evento, como un clic de botón
         button.addEventListener('click', function () {
-            loadScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js');
+            loadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js');
         }); 
     </script>
     <!-- jquery min js cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -1149,13 +1157,13 @@
     </script>
     <!--  lazy loading para imagen -->
     <script>
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const lazyImage = document.querySelector('img[loading="lazy"]');
             lazyImage.src = lazyImage.dataset.src;
             lazyImage.removeAttribute('loading');
         });
     </script>
-    <!--  lazy loading para iframe -->    
+    <!--  lazy loading para iframe -->
 
 </body>
 
