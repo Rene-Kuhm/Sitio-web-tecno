@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecnodespegue</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="/css/stylo.css">
+    <link rel="stylesheet" href="/css/stylo.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="/css/stylo.css">
+    </noscript>
     <!--<link rel="stylesheet" href="css/easy.css">
     <link rel="stylesheet" href="css/slick.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -16,11 +19,11 @@
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'"/>
+        crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'" />
 
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    </noscript>    
+    </noscript>
 </head>
 
 <body>
@@ -1144,54 +1147,54 @@
     <!--  almacenamiento en cache  para mejorar rendimiento  -->
     <script>
         if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/index.html').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/index.html').then(function (registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function (err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
     </script>
 
-  <script>
-    var CACHE_NAME = 'my-site-cache-v1';
-var urlsToCache = [
-  '/',
-  '/css/easy.css',
-  '/css/responsive.css',
-  '/css//slick.min.css',
-  '/css/style.css',
-  '/js/script.js',
-];
+    <script>
+        var CACHE_NAME = 'my-site-cache-v1';
+        var urlsToCache = [
+            '/',
+            '/css/easy.css',
+            '/css/responsive.css',
+            '/css//slick.min.css',
+            '/css/style.css',
+            '/js/script.js',
+        ];
 
-self.addEventListener('install', function(event) {
-  // Perform install steps
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache) {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-  );
-});
+        self.addEventListener('install', function (event) {
+            // Perform install steps
+            event.waitUntil(
+                caches.open(CACHE_NAME)
+                    .then(function (cache) {
+                        console.log('Opened cache');
+                        return cache.addAll(urlsToCache);
+                    })
+            );
+        });
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
-});
-  </script>
+        self.addEventListener('fetch', function (event) {
+            event.respondWith(
+                caches.match(event.request)
+                    .then(function (response) {
+                        // Cache hit - return response
+                        if (response) {
+                            return response;
+                        }
+                        return fetch(event.request);
+                    }
+                    )
+            );
+        });
+    </script>
 
 </body>
 
