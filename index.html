@@ -137,7 +137,7 @@
                 <!-- Right Sidebar -->
                 <section class="header-right-sidebar" id="right_side">
                     <div class="flex flex-sb">
-                        <a href="/"><img src="Images/Tecno2.webp" alt="logo de tecnodespegue"></a>
+                        <a href="/"><img src="Images/Tecno2.webp" alt="logo de tecnodespegue" loading="lazy"></a>
                         <button class="close_right_sidebar fa-solid fa-xmark" onclick="close_right_sade()"> </button>
                     </div>
                     <p>Servicios digitales construyendo tu imperio en la red.
@@ -1147,6 +1147,15 @@
             );
         });
     </script>
+    <!--  lazy loading para imagen -->
+    <script>
+        window.addEventListener('load', function() {
+            const lazyImage = document.querySelector('img[loading="lazy"]');
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.removeAttribute('loading');
+        });
+    </script>
+    <!--  lazy loading para iframe -->    
 
 </body>
 
