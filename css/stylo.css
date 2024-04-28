@@ -253,6 +253,10 @@ a {
     background-position: center center;
     background-size: cover;
 }
+.header-index::before{
+    content: url("../Images/bg/hero_bg.avif");
+    display: none;
+}
 
 header {
     padding: 20px 0;
