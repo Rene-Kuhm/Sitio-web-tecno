@@ -72,11 +72,8 @@
                         </ul>
                     </div>
                     <div class="flex nav-right">
-                        <p>Email: <span>Tecnodespegue@outlook.com</span></p>
-                        <!-- header buttons -->
-                        <i onclick="open_search_bar()" class="fa-solid fa-magnifying-glass"></i>
                         <i onclick="open_right_side()" class="fa-solid fa-bars"></i>
-                    </div>
+                    </div>   
                 </nav>
                 <!-- Sidebar -->
                 <aside id="mySidepanel" class="sidepanel">
@@ -103,34 +100,11 @@
                                 <a class="nav-link plus_collapse" data-bs-toggle="collapse" href="javascript:void(0);"
                                     onclick="toggleCollapse('pages')" aria-expanded="false" aria-controls="pages">
                                     <i class="fa-solid fa-plus"></i>
-                                </a>
-                                <div class="collapse" id="pages">
-                                    <ul>
-                                        <li><a class="nav-link" href="services.html">Services</a></li>
-                                        <li><a class="nav-link" href="pricing.html">Pricing Plan</a></li>
-                                        <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                                        <li><a class="nav-link" href="team.html">Team</a></li>
-                                        <li><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-                                        <li><a class="nav-link" href="faq.html">FAQ</a></li>
-                                        <li><a class="nav-link" href="blog.html">Blog</a></li>
-                                        <li><a class="nav-link" href="coming_soon.html">Coming Soon</a></li>
-                                        <li><a class="nav-link" href="404.html">404</a></li>
-                                    </ul>
-                                </div>
+                                </a> 
                             </li>
                         </ul>
                     </div>
                 </aside>
-
-                <!-- searchbar -->
-                <div id="search-bar">
-                    <div class="btn_hover1" onclick="close_search_bar()"><i class="fa-solid fa-xmark"></i></div>
-                    <form method="search" action="#">
-                        <input type="search" required placeholder="Search...">
-                        <button type="submit" class="btn_hover1">Search</button>
-                    </form>
-                </div>
-
                 <!-- Right Sidebar -->
                 <section class="header-right-sidebar" id="right_side">
                     <div class="flex flex-sb">
@@ -251,8 +225,7 @@
                             <hr>
                             <h5>SOBRE NOSOTROS</h5>
                         </div>
-                        <h2>Explore nuestros servicios y aumente su presencia en línea
-                        </h2>
+                        <h2>Explore nuestros servicios y aumente su presencia en línea </h2>
                         <p>Explora nuestros servicios y potencia tu presencia en línea con nosotros. Desde nuestros
                             inicios en la era de la tipografía manual hasta la moderna era digital, hemos mantenido
                             nuestra esencia al brindar calidad y confiabilidad en cada proyecto. Nuestra experiencia
@@ -1049,6 +1022,10 @@
             nav.style.display = 'none';
             right.style.display = 'none';
         }, 100); // Agrega un retraso de 100 milisegundos
+    }
+
+    function closeNav() {
+        // Aquí debes definir lo que debe hacer la función closeNav
     }
 
     // Selecciona todos los enlaces en el menú de navegación
