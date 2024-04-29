@@ -357,6 +357,8 @@ header {
     color: #d3c9c1;
 }
 
+
+
 .container-nav {
     gap: 0px;
     overflow: visible;
@@ -528,6 +530,12 @@ aside ul li a.active {
 aside {
     background-color: #3d0f41;
     z-index: 10;
+}
+
+#mySidepanel {
+    display: visible;
+  
+    /* other styles */
 }
 
 .sidepanel {
