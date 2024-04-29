@@ -295,6 +295,7 @@ nav li a.active,
 
 .dropdown {
     position: relative;
+    width: 400px;
 }
 
 .dropdown-toggle::after {
