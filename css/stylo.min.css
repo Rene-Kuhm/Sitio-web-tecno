@@ -390,12 +390,12 @@ nav li a.active {
 }
 
 .dropdown-menu {
-    position: absolute;
-    padding: 15px 30px;
     display: none;
-    z-index: 9;
-    background-color: #3d0f41;
-    border-radius: 10px;
+    position: absolute;
+    background-color: #6a1754;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .navbar .dropdown:hover .dropdown-menu {
@@ -410,13 +410,14 @@ nav li a.active {
 
 .dropdown-item {
     display: block;
-    width: 100%; 
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
 }
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    color: #fff;
-    background-color: inherit;
+    background-color: #dda439;
 }
 
 .dropdown-menu li {
