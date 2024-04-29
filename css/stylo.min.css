@@ -961,9 +961,9 @@ aside .pages {
 
 .logoipsum-slider {
     margin-top: 24px;
-    display: flex; /* Añade esta línea para habilitar flexbox */
+    display: flex;
     flex-direction: row; 
-    justify-content: center;/* Añade esta línea para alinear los elementos en una fila */
+    justify-content: center;
 }
 
 .logoipsum h3 {
@@ -989,7 +989,7 @@ aside .pages {
 
 @media (max-width: 768px) {
     .logoipsum-slider {
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         overflow-x: auto;
