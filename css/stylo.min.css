@@ -954,51 +954,6 @@ aside .pages {
     margin: 20px 0 12px
 }
 
-.logoipsum {
-    padding: 150px 0;
-    margin-top: -1px
-}
-
-.logoipsum-slider {
-    margin-top: 24px;
-    display: flex; /* Añade esta línea para habilitar flexbox */
-    flex-direction: row; 
-    justify-content: center;/* Añade esta línea para alinear los elementos en una fila */
-}
-
-.logoipsum h3 {
-    letter-spacing: 1.25px;
-    color: #fff
-}
-
-.logoipsum img {
-    width: 120px;
-    height: auto;
-    margin: 0 auto
-}
-
-.logoipsum .hr1 {
-    width: 60px;
-    margin: 0 auto 50px
-}
-
-.logoipsum .hr2 {
-    width: 60px;
-    margin: 70px auto 0
-}
-
-@media (max-width: 768px) {
-    .logoipsum-slider {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        overflow-x: auto;
-    }
-    .logoipsum-slider figure {
-        flex: 0 0 auto;
-    }
-}
-
 .about {
     background: #3d0f41;
     padding: 100px 0
