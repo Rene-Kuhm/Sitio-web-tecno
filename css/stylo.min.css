@@ -76,7 +76,7 @@ footer form input[type=submit] {
 .footer-menu i,
 .header-right-sidebar i,
 .hero-social-icon i {
-    -webkit-text-fill-color: transparent
+    -webkit-text-fill-color: transparent;
 }
 
 *,
@@ -692,7 +692,7 @@ aside .pages {
     align-items: center;
     border-radius: .25em;
     border: 1.5px solid #b520a3;
-    color: #fff;
+    color: #ffffff;
     margin: 30px
 }
 
@@ -960,56 +960,9 @@ aside .pages {
     margin: 20px 0 12px
 }
 
-<<<<<<< HEAD
-=======
-.logoipsum {
-    padding: 150px 0;
-    margin-top: -1px
-}
 
-.logoipsum-slider {
-    margin-top: 24px;
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-}
-
-.logoipsum h3 {
-    letter-spacing: 1.25px;
-    color: #fff
-}
-
-.logoipsum img {
-    width: 120px;
-    height: auto;
-    margin: 0 auto
-}
-
-.logoipsum .hr1 {
-    width: 60px;
-    margin: 0 auto 50px
-}
-
-.logoipsum .hr2 {
-    width: 60px;
-    margin: 70px auto 0
-}
-
-@media (max-width: 768px) {
-    .logoipsum-slider {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        overflow-x: auto;
-    }
-    .logoipsum-slider figure {
-        flex: 0 0 auto;
-    }
-}
-
->>>>>>> 64be74aff3a670c3d5aba33c38620b9dc97e2341
 .about {
-    background: #3d0f41;
+    background: #3d0f41 !important;
     padding: 100px 0;
 }
 
