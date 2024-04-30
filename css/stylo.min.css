@@ -676,6 +676,7 @@ aside .pages {
 .show {
     height: 500px !important
 }
+
 #search-bar,
 .header-right-sidebar {
     transition: .5s;
@@ -740,6 +741,7 @@ aside .pages {
 .feature,
 .logoipsum {
     background-color: #150725
+    
 }
 
 .header-right-sidebar img {
@@ -936,6 +938,7 @@ aside .pages {
     display: flex;
     flex: 0 0 auto;
     width: 25%;
+    padding: 30px;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5)
 }
@@ -946,6 +949,7 @@ aside .pages {
     color: #fff;
     padding: 40px 30px;
     transition: .4s
+
 }
 
 .header-card div:hover {
@@ -959,7 +963,7 @@ aside .pages {
 
 .header-card img,
 .service-card img[alt=slider3] {
-    width: 60px
+    width: 60px;
 }
 
 .header-card h4 {
@@ -1460,7 +1464,7 @@ aside .pages {
     background-size: cover;
     background-position: center center;
     padding: 120px 0;
-    margin-top: -2px
+    margin-top: -18px;
 }
 
 .work h5 {
@@ -1469,7 +1473,7 @@ aside .pages {
 
 .work-para {
     color: #fff;
-    padding: 0 290px
+    padding: 0 290px;
 }
 
 .work-line {
@@ -1478,7 +1482,7 @@ aside .pages {
     background-position: center;
     min-height: 242px;
     background-repeat: no-repeat;
-    margin: 146px 25px
+    margin: 146px 25px;
 }
 
 .work-line div {
