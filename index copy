@@ -934,26 +934,173 @@
     </div>
 
     <!-- end site wrapper -->
-   <!-- button back to top -->
-<button onclick="scrollToTop()" id="backToTopBtn" class="btn_hover2"><i class="fa-solid fa-arrow-turn-up"></i></button>
 
-<script type="module" src="https://cdn.skypack.dev/aos@3.0.0-beta.6/dist/aos.js" integrity="sha384-..." crossorigin="anonymous"></script>
 
-<!-- jquery min js cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- button back to top -->
+    <button onclick="scrollToTop()" id="backToTopBtn" class="btn_hover2"><i
+            class="fa-solid fa-arrow-turn-up"></i></button>
 
-<!-- slick carousel min js cdn -->
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" integrity="sha256-DHF4zGyjT7GOMPBwpeehwoey18z8uiz98G4PRu2lV0A=" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.skypack.dev/aos@3.0.0-beta.6/dist/aos.js" integrity="sha384-..."
+        crossorigin="anonymous"></script>
 
-<!-- custom js -->
-<script src="js/script-min.js"></script>
+    <script>
+        function loadScript(src) {
+            var script = document.createElement('script');
+            script.src = src;
+            script.integrity = "sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==";
+            script.crossOrigin = "anonymous";
+            script.referrerPolicy = "no-referrer";
+            document.body.appendChild(script);
+        }
 
-<!-- emailjs -->
-<script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+        // Luego, puedes llamar a esta función cuando sea necesario cargar el script
+        // Por ejemplo, podrías hacerlo en respuesta a un evento, como un clic de botón
+        var button = document.getElementById('backToTopBtn');
+        button.addEventListener('click', function () {
+            loadScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js');
+        });
+    </script>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<!--  main js -->
-<script src="main.js"></script>
+    <!-- jquery min js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- slick carousel min js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        integrity="sha256-DHF4zGyjT7GOMPBwpeehwoey18z8uiz98G4PRu2lV0A=" crossorigin="anonymous"></script>
+
+    <!-- custom js -->
+    <script src="js/script-min.js"></script>
+
+    <!-- emailjs -->
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+    <script type="text/javascript">
+         document.addEventListener('DOMContentLoaded',function () {
+            emailjs.init("NVVFxSIjNX0Vhh-ik");
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- manejo de evento emailjs -->
+    <script type="text/javascript">
+        var form = document.getElementById('footer-form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Previene el envío normal del formulario
+
+            // Envía el formulario utilizando la API de EmailJS
+            emailjs.sendForm('service_qwt25jr', 'template_v9objjp', this)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    Swal.fire({
+                        toast: true, // Hace que la alerta tenga forma de tira
+                        width: '400px', // Ajusta el ancho de la alerta
+                        position: 'top-end', // Posiciona la alerta en la esquina superior derecha
+                        title: 'Enviado!',
+                        text: 'Tu mensaje ha sido enviado con éxito!',
+                        icon: 'success',
+                        timer: 3000, // La alerta desaparecerá después de 3 segundos
+                        showConfirmButton: false, // Oculta el botón de confirmación
+                        background: '#6d2f8a', // Cambia el color de fondo de la alerta
+                        color: '#fff', // Cambia el color del texto de la alerta
+                    });
+                    form.reset(); // Borra los campos del formulario
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    Swal.fire({
+                        toast: true, // Hace que la alerta tenga forma de tira
+                        width: '400px', // Ajusta el ancho de la alerta
+                        position: 'top-end', // Posiciona la alerta en la esquina superior derecha
+                        title: 'Error!',
+                        text: 'Falló el envío del mensaje: ' + error.text,
+                        icon: 'error',
+                        timer: 3000, // La alerta desaparecerá después de 3 segundos
+                        showConfirmButton: false, // Oculta el botón de confirmación
+                        background: '#6d2f8a', // Cambia el color de fondo de la alerta
+                        color: '#fff', // Cambia el color del texto de la alerta
+                    });
+                });
+        });
+    </script>
+   
+    
+
+  
+
+
+    <script>
+        function toggleCollapse(elementId) {
+            var element = document.getElementById(elementId);
+            if (element.style.display === 'none') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+
+    <!--  almacenamiento en cache  para mejorar rendimiento  -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/index.html').then(function (registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function (err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+
+    <script>
+        var CACHE_NAME = 'my-site-cache-v1';
+        var urlsToCache = [
+            '/',
+            '/css/easy.css',
+            '/css/responsive.css',
+            '/css//slick.min.css',
+            '/css/style.css',
+            '/js/script-min.js',
+        ];
+
+        self.addEventListener('install', function (event) {
+            // Perform install steps
+            event.waitUntil(
+                caches.open(CACHE_NAME)
+                    .then(function (cache) {
+                        console.log('Opened cache');
+                        return cache.addAll(urlsToCache);
+                    })
+            );
+        });
+
+        self.addEventListener('fetch', function (event) {
+            event.respondWith(
+                caches.match(event.request)
+                    .then(function (response) {
+                        // Cache hit - return response
+                        if (response) {
+                            return response;
+                        }
+                        return fetch(event.request);
+                    }
+                    )
+            );
+        });
+    </script>
+    <!--  lazy loading para imagen -->
+    <script>
+        window.addEventListener('load', function () {
+            const lazyImage = document.querySelector('img[loading="lazy"]');
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.removeAttribute('loading');
+        });
+    </script>
+    <!--  lazy loading para iframe -->
+
+
 </body>
 
 </html>
