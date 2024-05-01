@@ -82,3 +82,20 @@ window.addEventListener('load', function () {
     lazyImage.src = lazyImage.dataset.src;
     lazyImage.removeAttribute('loading');
 });
+
+fetch('https://api.cloudflare.com/client/v4/zones/fe69ccaa5bb3fdd6e8ac542547c4dae4/settings/transformations', {
+  method: 'PATCH',
+  headers: {
+    'Authorization': 'JRVZ0cyQyCjkKUXAwrIP61bqIIGe68Yb',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    // Tus parámetros de transformación van aquí...
+    "fit": "cover",
+    "width": 800,
+    "quality": "auto",
+    "format": "auto"
+  })
+})
+.then(response => response.json())
+.then(data => console.log(data));
