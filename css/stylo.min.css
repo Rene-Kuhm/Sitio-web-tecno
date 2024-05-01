@@ -326,14 +326,7 @@ a {
     color: #c9c3c3
 }
 
-#preload-images {
-    position: absolute;
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-    background-image: url('hero_bg.avif'), url('hero.webp'), url('image3.jpg');
-  }
+
 
 .container {
     max-width: 1320px;
